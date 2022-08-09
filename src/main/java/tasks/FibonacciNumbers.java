@@ -4,7 +4,7 @@
  * - а каждый последующий - сумме двух предыдущих,
  * - то есть числа Фибоначчи - это 1 1 2 3 4 8 13 21 34 55 89 и т.д.
  */
-package loops;
+package tasks;
 
 public class FibonacciNumbers {
 

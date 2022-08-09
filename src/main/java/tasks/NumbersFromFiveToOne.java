@@ -1,7 +1,7 @@
 /**
  * Необходимо вывести на экран числа от 5 до 1. На экране должно быть: 5 4 3 2 1.
  */
-package loops;
+package tasks;
 
 public class NumbersFromFiveToOne {
 

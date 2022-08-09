@@ -2,7 +2,7 @@
  * Напишите программу, которая меняет местами элементы одномерного массива из String в обратном порядке.
  * Не используйте дополнительный массив для хранения результатов.
  */
-package arrays;
+package tasks;
 
 public class ElementsOfArrayInOppositeOrder {
 

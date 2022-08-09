@@ -4,7 +4,7 @@
  * * * * * *
  * * * * * *
  */
-package loops;
+package tasks;
 
 public class StarsOutput {
 

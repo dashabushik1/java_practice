@@ -1,7 +1,7 @@
 /**
  * Напишите программу, которая определяет, сколько слов в сроке (ввод с консоли).
  */
-package arrays;
+package tasks;
 
 public class WordsInTheLine {
 

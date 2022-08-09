@@ -1,7 +1,7 @@
 /**
  * Необходимо вывести на экран таблицу умножения на 3.
  */
-package loops;
+package tasks;
 
 public class MultiplicationTableForThree {
 
