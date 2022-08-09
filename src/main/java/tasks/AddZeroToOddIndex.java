@@ -7,6 +7,7 @@ package tasks;
 public class AddZeroToOddIndex {
 
     public static void main(String[] args) {
+
         int[] randomNumbers = new int[8];
         for (int i = 0; i < randomNumbers.length; i++) {
             randomNumbers[i] = (int) (Math.random() * 10) + 1;

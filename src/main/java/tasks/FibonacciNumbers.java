@@ -9,10 +9,12 @@ package tasks;
 public class FibonacciNumbers {
 
     public static void main(String[] args) {
+
         int firstNumber = 1;
         int secondNumber = 1;
         int thirdNumber;
         System.out.print(firstNumber + " " + secondNumber + " ");
+
         for (int i = 3; i <= 11; i++) {
             thirdNumber = firstNumber + secondNumber;
             System.out.print(thirdNumber + " ");
