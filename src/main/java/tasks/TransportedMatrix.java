@@ -14,7 +14,7 @@ public class TransportedMatrix {
         System.out.println("Initial matrix: ");
         for (int i = 0; i < squareMatrix.length; i++) {
             for (int j = 0; j < squareMatrix[i].length; j++) {
-                System.out.printf("%4d", squareMatrix[i][j]);
+                System.out.printf("%2d", squareMatrix[i][j]);
             }
             System.out.println("");
         }
@@ -32,7 +32,7 @@ public class TransportedMatrix {
         System.out.println("Transported matrix: ");
         for (int i = 0; i < squareMatrix.length; i++) {
             for (int j = 0; j < squareMatrix[i].length; j++) {
-                System.out.printf("%4d", squareMatrix[i][j]);
+                System.out.printf("%2d", squareMatrix[i][j]);
             }
             System.out.println("");
         }
