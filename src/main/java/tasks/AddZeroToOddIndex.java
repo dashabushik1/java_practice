@@ -8,18 +8,37 @@ public class AddZeroToOddIndex {
 
     public static void main(String[] args) {
 
-        int[] randomNumbers = new int[8];
+        final int size = 8;
+        int[] randomNumbers = new int[size];
+
+        AddZeroToOddIndex.fillArray(randomNumbers);
+        AddZeroToOddIndex.printArray(randomNumbers);
+        System.out.println("");
+        AddZeroToOddIndex.changeArray(randomNumbers);
+        AddZeroToOddIndex.printArray(randomNumbers);
+    }
+
+    private static int[] fillArray(int[] randomNumbers) {
         for (int i = 0; i < randomNumbers.length; i++) {
             randomNumbers[i] = (int) (Math.random() * 10) + 1;
-            System.out.print(randomNumbers[i] + " ");
         }
+        return randomNumbers;
+    }
 
-        System.out.println(" ");
+    private static int[] changeArray(int[] randomNumbers) {
         for (int i = 0; i < randomNumbers.length; i++) {
-            if (i % 2 == 1) {
+            if (i % 2 != 0) {
                 randomNumbers[i] = 0;
             }
+        }
+        return randomNumbers;
+    }
+
+    private static int[] printArray(int[] randomNumbers) {
+        for (int i = 0; i < randomNumbers.length; i++) {
             System.out.print(randomNumbers[i] + " ");
         }
+        return randomNumbers;
     }
 }
+
