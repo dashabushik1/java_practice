@@ -11,11 +11,11 @@ public class AddZeroToOddIndex {
         final int size = 8;
         int[] randomNumbers = new int[size];
 
-        AddZeroToOddIndex.fillArray(randomNumbers);
-        AddZeroToOddIndex.printArray(randomNumbers);
+        fillArray(randomNumbers);
+        printArray(randomNumbers);
         System.out.println("");
-        AddZeroToOddIndex.changeArray(randomNumbers);
-        AddZeroToOddIndex.printArray(randomNumbers);
+        replaceElementsWithOddIndexes(randomNumbers);
+        printArray(randomNumbers);
     }
 
     private static int[] fillArray(int[] randomNumbers) {
@@ -25,7 +25,7 @@ public class AddZeroToOddIndex {
         return randomNumbers;
     }
 
-    private static int[] changeArray(int[] randomNumbers) {
+    private static int[] replaceElementsWithOddIndexes(int[] randomNumbers) {
         for (int i = 0; i < randomNumbers.length; i++) {
             if (i % 2 != 0) {
                 randomNumbers[i] = 0;
