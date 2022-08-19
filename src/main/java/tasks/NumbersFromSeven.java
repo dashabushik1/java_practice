@@ -8,8 +8,8 @@ public class NumbersFromSeven {
 
     public static void main(String[] args) {
 
-        int count = 100;
-        for (int i = 7; i < count; i = i + 7) {   // 1 способ
+        int maxNumber = 100;
+        for (int i = 7; i < maxNumber; i = i + 7) {   // 1 способ
             System.out.print(i + " ");
         }
 
