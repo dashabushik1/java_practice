@@ -8,8 +8,8 @@ public class AddZeroToOddIndex {
 
     public static void main(String[] args) {
 
-        final int size = 8;
-        int[] randomNumbers = new int[size];
+        final int SIZE = 8;
+        int[] randomNumbers = new int[SIZE];
 
         fillArray(randomNumbers);
         printArray(randomNumbers);
