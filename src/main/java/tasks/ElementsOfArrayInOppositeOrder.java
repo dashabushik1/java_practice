@@ -7,8 +7,8 @@ package tasks;
 public class ElementsOfArrayInOppositeOrder {
 
     public static void main(String[] args) {
-        String[] letters = {"A", "B", "C", "D"};
-        ElementsOfArrayInOppositeOrder.printArray(letters);
+        String[] letters = {"A", "B", "C", "D", "E", "F", "G"};
+        printArray(letters);
     }
 
     private static String[] printArray(String[] letters) {
