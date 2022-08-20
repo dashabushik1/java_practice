@@ -14,7 +14,7 @@ public class SumOfAllNumbersFromOneToEnteredByUser {
             number = Integer.parseInt(args[i]);
         }
 
-        if (number <= 0) {
+        if (number <= 1) {
             throw new RuntimeException("Number must be positive!");
         }
 
