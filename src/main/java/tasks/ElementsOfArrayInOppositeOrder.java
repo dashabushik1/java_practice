@@ -8,10 +8,10 @@ public class ElementsOfArrayInOppositeOrder {
 
     public static void main(String[] args) {
         String[] letters = {"A", "B", "C", "D", "E", "F", "G"};
-        printArray(letters);
+        printArrayInReverseOrder(letters);
     }
 
-    private static String[] printArray(String[] letters) {
+    public static String[] printArrayInReverseOrder(String[] letters) {  // метод выводит данный массив в обратном порядке
         for (int i = letters.length - 1; i >= 0; i--) {
             System.out.print(letters[i] + " ");
         }
