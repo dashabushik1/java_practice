@@ -6,21 +6,27 @@ package tasks;
 public class MultiplicationTableForThree {
 
     public static void main(String[] args) {
+        final int NUMBER = 3;
+        final int SIZE = 11;
+        String[] multiplicationTable = new String[SIZE];
 
-        final int number = 3;
-        countMultiplicationTable(number);
-
-//        for (int i = 3; i <= 3 ; i++) {
-//            for (int j = 1; j <= 10; j++) {
-//                System.out.println(i + " * " + j + " = " + (i*j));
-//            }
-//        }
+        countMultiplicationTable(NUMBER, multiplicationTable);
+        printMultiplicationTable(multiplicationTable);
     }
 
-    public static void countMultiplicationTable(int n) {
+    public static String[] countMultiplicationTable(int n, String[] multiplicationTable) { // метод принимает число и считает таблицу умножения
+        String multiply = " * ";
+        String equals = " = ";
         for (int i = 1; i <= 10; i++) {
-            System.out.println(i + " * " + n + " = " + (i * n));
+            multiplicationTable[i] = i + multiply + n + equals + (i * n);
         }
+        return multiplicationTable;
     }
-    // метод вывода?
+
+    public static String[] printMultiplicationTable(String[] multiplicationTable) { // метод выводит таблицу умножения
+        for (int i = 0; i < multiplicationTable.length; i++) {
+            System.out.println(multiplicationTable[i] + " ");
+        }
+        return multiplicationTable;
+    }
 }
