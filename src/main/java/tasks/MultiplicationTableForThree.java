@@ -25,7 +25,9 @@ public class MultiplicationTableForThree {
 
     public static String[] printMultiplicationTable(String[] multiplicationTable) { // метод выводит таблицу умножения
         for (int i = 0; i < multiplicationTable.length; i++) {
-            System.out.println(multiplicationTable[i] + " ");
+            if (multiplicationTable[i] != null) {
+                System.out.println(multiplicationTable[i] + " ");
+            }
         }
         return multiplicationTable;
     }
