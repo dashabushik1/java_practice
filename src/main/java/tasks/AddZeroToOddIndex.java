@@ -11,22 +11,22 @@ public class AddZeroToOddIndex {
         final int SIZE = 8;
         int[] randomNumbers = new int[SIZE];
 
-        fillArray(randomNumbers);
+        fillArrayOfRandomNumbers(randomNumbers);
         printArray(randomNumbers);
         System.out.println("");
         replaceElementsWithOddIndexes(randomNumbers);
         printArray(randomNumbers);
     }
 
-    private static int[] fillArray(int[] randomNumbers) {
+    public static int[] fillArrayOfRandomNumbers(int[] randomNumbers) {  // метод заполняет массив случайными числами
         for (int i = 0; i < randomNumbers.length; i++) {
             randomNumbers[i] = (int) (Math.random() * 10) + 1;
         }
         return randomNumbers;
     }
 
-    private static int[] replaceElementsWithOddIndexes(int[] randomNumbers) {
-        for (int i = 0; i < randomNumbers.length; i++) {
+    public static int[] replaceElementsWithOddIndexes(int[] randomNumbers) {  // метод находит элементы с нечетным индексом
+        for (int i = 0; i < randomNumbers.length; i++) {                      // и меняет значения на 0
             if (i % 2 != 0) {
                 randomNumbers[i] = 0;
             }
@@ -34,7 +34,7 @@ public class AddZeroToOddIndex {
         return randomNumbers;
     }
 
-    private static int[] printArray(int[] randomNumbers) {
+    public static int[] printArray(int[] randomNumbers) {  // метод выводит массив
         for (int i = 0; i < randomNumbers.length; i++) {
             System.out.print(randomNumbers[i] + " ");
         }
