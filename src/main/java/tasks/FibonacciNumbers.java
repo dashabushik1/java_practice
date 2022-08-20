@@ -10,17 +10,28 @@ public class FibonacciNumbers {
 
     public static void main(String[] args) {
 
-        int firstNumber = 1;
-        int secondNumber = 1;
-        int thirdNumber;
-        System.out.print(firstNumber + " " + secondNumber + " ");
+        final int SIZE = 11;
+        int[] fibonacciNumbers = new int[SIZE];
 
-        for (int i = 3; i <= 11; i++) {
-            thirdNumber = firstNumber + secondNumber;
-            System.out.print(thirdNumber + " ");
-            firstNumber = secondNumber;
-            secondNumber = thirdNumber;
+        fillArrayByFibonacciNumbers(fibonacciNumbers);
+        printFibonacciNumbers(fibonacciNumbers);
+    }
+
+    public static int[] fillArrayByFibonacciNumbers(int[] fibonacciNumbers) {  // метод заполняет массив числами Фибоначчи
+        for (int i = 0; i < fibonacciNumbers.length; i++) {
+            if (i < 2) {
+                fibonacciNumbers[i] = 1;
+            } else {
+                fibonacciNumbers[i] = fibonacciNumbers[i - 2] + fibonacciNumbers[i - 1];
+            }
         }
-        System.out.println(" ");
+        return fibonacciNumbers;
+    }
+
+    public static int[] printFibonacciNumbers(int[] fibonacciNumbers) {  // метод выводит массив
+        for (int i = 0; i < fibonacciNumbers.length; i++) {
+            System.out.print(fibonacciNumbers[i] + " ");
+        }
+        return fibonacciNumbers;
     }
 }
