@@ -10,15 +10,38 @@ public class TransportedMatrix {
 
     public static void main(String[] args) {
 
-        int[][] squareMatrix = {{1, 2}, {3, 4}};
+        final int SIZE = 5;
+        int[][] squareMatrix = new int[SIZE][SIZE];
+
+        fillSquareMatrix(squareMatrix);
         System.out.println("Initial matrix: ");
+        printInitialMatrix(squareMatrix);
+        System.out.println("");
+        matrixTransportation(squareMatrix);
+        System.out.println("Transported matrix: ");
+        printTransportedMatrix(squareMatrix);
+    }
+
+    public static int[][] fillSquareMatrix(int[][] squareMatrix) {
+        for (int i = 0; i < squareMatrix.length; i++) {
+            for (int j = 0; j < squareMatrix[i].length; j++) {
+                squareMatrix[i][j] = (int) (Math.random() * 10);
+            }
+        }
+        return squareMatrix;
+    }
+
+    public static int[][] printInitialMatrix(int[][] squareMatrix) {
         for (int i = 0; i < squareMatrix.length; i++) {
             for (int j = 0; j < squareMatrix[i].length; j++) {
                 System.out.printf("%2d", squareMatrix[i][j]);
             }
             System.out.println("");
         }
+        return squareMatrix;
+    }
 
+    public static int[][] matrixTransportation(int[][] squareMatrix) {
         for (int i = 0; i < squareMatrix.length; i++) {
             for (int j = i + 1; j < squareMatrix[i].length; j++) {
                 if (i != j) {
@@ -28,14 +51,17 @@ public class TransportedMatrix {
                 }
             }
         }
+        return squareMatrix;
+    }
 
-        System.out.println("Transported matrix: ");
+    public static int[][] printTransportedMatrix(int[][] squareMatrix) {
         for (int i = 0; i < squareMatrix.length; i++) {
             for (int j = 0; j < squareMatrix[i].length; j++) {
                 System.out.printf("%2d", squareMatrix[i][j]);
             }
             System.out.println("");
         }
+        return squareMatrix;
     }
 }
 
