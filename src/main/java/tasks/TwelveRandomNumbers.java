@@ -17,11 +17,11 @@ public class TwelveRandomNumbers {
         findIndex(randomNumbers);
     }
 
-    public static void fillArrayOfRandomNumbers(int[] randomNumbers) { // метод заполняет массив случайными числами
-        for (int i = 0; i < randomNumbers.length; i++) {
+    public static void fillArrayOfRandomNumbers(int[] array) { // метод заполняет массив случайными числами
+        for (int i = 0; i < array.length; i++) {
             int number = (int) (Math.random() * 15);
-            int sign = Math.random() > 0.5 ? 1 : -1;
-            randomNumbers[i] = number * sign;
+            int mark = Math.random() > 0.5 ? 1 : -1;
+            array[i] = number * mark;
         }
     }
 
