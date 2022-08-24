@@ -7,14 +7,28 @@ package tasks;
 public class ElementsOfArrayInOppositeOrder {
 
     public static void main(String[] args) {
+
         String[] letters = {"A", "B", "C", "D", "E", "F", "G"};
-        printArrayInReverseOrder(letters);
+
+        print(letters);
+        reverse(letters);
+        System.out.println("");
+        print(letters);
     }
 
-    public static String[] printArrayInReverseOrder(String[] letters) {  // метод выводит данный массив в обратном порядке
-        for (int i = letters.length - 1; i >= 0; i--) {
-            System.out.print(letters[i] + " ");
+    public static void print(String[] array) {  // метод выводит массив
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
-        return letters;
+    }
+
+    public static void reverse(String[] array) {  // метод меняет местами элементы массива в обратном порядке
+        int arrayLength = array.length;
+        int iterations = arrayLength / 2;
+        for (int i = 0; i < iterations; i++) {
+            String reverse = array[i];
+            array[i] = array[arrayLength - 1 - i];
+            array[arrayLength - 1 - i] = reverse;
+        }
     }
 }
