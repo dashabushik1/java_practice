@@ -8,30 +8,29 @@ package tasks;
 
 public class FibonacciNumbers {
 
+    private static final int LENGTH = 11;
+
     public static void main(String[] args) {
 
-        final int SIZE = 11;
-        int[] fibonacciNumbers = new int[SIZE];
+        int[] fibonacciNumbers = new int[LENGTH];
 
         fillArrayByFibonacciNumbers(fibonacciNumbers);
-        printFibonacciNumbers(fibonacciNumbers);
+        print(fibonacciNumbers);
     }
 
-    public static int[] fillArrayByFibonacciNumbers(int[] fibonacciNumbers) {  // метод заполняет массив числами Фибоначчи
-        for (int i = 0; i < fibonacciNumbers.length; i++) {
+    public static void fillArrayByFibonacciNumbers(int[] array) {  // метод заполняет массив числами Фибоначчи
+        for (int i = 0; i < array.length; i++) {
             if (i < 2) {
-                fibonacciNumbers[i] = 1;
+                array[i] = 1;
             } else {
-                fibonacciNumbers[i] = fibonacciNumbers[i - 2] + fibonacciNumbers[i - 1];
+                array[i] = array[i - 2] + array[i - 1];
             }
         }
-        return fibonacciNumbers;
     }
 
-    public static int[] printFibonacciNumbers(int[] fibonacciNumbers) {  // метод выводит массив
-        for (int i = 0; i < fibonacciNumbers.length; i++) {
-            System.out.print(fibonacciNumbers[i] + " ");
+    public static void print(int[] array) {  // метод выводит массив
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
-        return fibonacciNumbers;
     }
 }
