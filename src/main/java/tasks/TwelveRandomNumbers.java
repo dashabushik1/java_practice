@@ -6,39 +6,39 @@ package tasks;
 
 public class TwelveRandomNumbers {
 
+    private static final int SIZE = 12;
+
     public static void main(String[] args) {
 
-        final int SIZE = 12;
         int[] randomNumbers = new int[SIZE];
 
         fillArrayOfRandomNumbers(randomNumbers);
-        printArrayOfRandomNumbers(randomNumbers);
-        printIndexOfMaxElementInArray(randomNumbers);
+        print(randomNumbers);
+        findIndex(randomNumbers);
     }
 
-    public static int[] fillArrayOfRandomNumbers(int[] randomNumbers) { // метод заполняет массив случайными числами
+    public static void fillArrayOfRandomNumbers(int[] randomNumbers) { // метод заполняет массив случайными числами
         for (int i = 0; i < randomNumbers.length; i++) {
-            randomNumbers[i] = (int) ((Math.random() * 31) - 15);
+            int number = (int) (Math.random() * 15);
+            int sign = Math.random() > 0.5 ? 1 : -1;
+            randomNumbers[i] = number * sign;
         }
-        return randomNumbers;
     }
 
-    public static int[] printArrayOfRandomNumbers(int[] randomNumbers) { // метод выводит рандомные числа
-        for (int i = 0; i < randomNumbers.length; i++) {
-            System.out.print(randomNumbers[i] + " ");
+    public static void print(int[] array) { // метод выводит массив
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
-        return randomNumbers;
     }
 
-    public static int[] printIndexOfMaxElementInArray(int[] randomNumbers) { // метод ищет и выводит индекс
-        int maxIndex = 0;                // максимального элемента в массиве
-        for (int i = 0; i < randomNumbers.length; i++) {
-            if (randomNumbers[i] >= randomNumbers[maxIndex]) {
-                maxIndex = i;
+    public static void findIndex(int[] array) { // метод ищет и выводит индекс максимального элемента в массиве
+        int maxElementIndex = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] >= array[maxElementIndex]) {
+                maxElementIndex = i;
             }
         }
         System.out.println("");
-        System.out.println(maxIndex);
-        return randomNumbers;
+        System.out.println(maxElementIndex);
     }
 }
