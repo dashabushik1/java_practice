@@ -8,10 +8,7 @@ public class SumOfAllNumbersFromOneToEnteredByUser {
 
     public static void main(String[] args) {
 
-        int numberByUser = 0;
-        for (int i = 0; i < args.length; i++) {
-            numberByUser = Integer.parseInt(args[i]);
-        }
+        int numberByUser = Integer.parseInt(args[0]);
         showSum(numberByUser);
     }
 
