@@ -9,15 +9,8 @@ public class NumbersFromSeven {
     public static void main(String[] args) {
 
         int maxNumber = 100;
-        for (int i = 7; i < maxNumber; i = i + 7) {   // 1 способ
+        for (int i = 7; i < maxNumber; i = i + 7) {
             System.out.print(i + " ");
-        }
-
-        System.out.println("");
-        for (int i = 7; i <= 7; i++) {    // 2 способ
-            for (int j = 1; j < 15; j++) {
-                System.out.print((i * j) + " ");
-            }
         }
     }
 }
