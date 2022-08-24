@@ -8,19 +8,14 @@ public class SumOfAllNumbersFromOneToEnteredByUser {
 
     public static void main(String[] args) {
 
-        int sum = 0;
-        int number = 0;
+        int numberByUser = 0;
         for (int i = 0; i < args.length; i++) {
-            number = Integer.parseInt(args[i]);
+            numberByUser = Integer.parseInt(args[i]);
         }
+        showSum(numberByUser);
+    }
 
-        if (number <= 1) {
-            throw new RuntimeException("Number must be positive!");
-        }
-
-        for (int i = 1; i <= number; i++) {
-            sum = sum + i;
-        }
-        System.out.println(sum);
+    public static void showSum(int number) {
+        System.out.println((number * (number + 1) / 2) + "");   // Сумма чисел от 1 до N рассчитывается по формуле N * (N + 1) / 2
     }
 }
