@@ -6,19 +6,36 @@ package tasks;
 
 public class StrictlyIncreasingSequence {
 
+    private static final int SIZE = 4;
+
     public static void main(String[] args) {
 
-        int[] randomNumbers = new int[4];
-        for (int i = 0; i < 4; i++) {
-            randomNumbers[i] = (int) ((Math.random() * 89) + 10);
-            System.out.print(randomNumbers[i] + " ");
-        }
+        int[] randomNumbers = new int[SIZE];
 
+        fillArrayOfRandomNumbers(randomNumbers);
+        print(randomNumbers);
+        printMessage(randomNumbers);
+    }
+
+    public static void fillArrayOfRandomNumbers(int[] array) {  // метод заполняет массив случайными числами
+        for (int i = 0; i < 4; i++) {
+            array[i] = (int) ((Math.random() * 90) + 10);
+        }
+    }
+
+    public static void print(int[] array) {  // метод выводит массив в строку
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
         System.out.println("");
+    }
+
+    public static void printMessage(int[] array) {  // метод проверяет числа и выводит сообщения
         boolean isIncreasingSequence = true;
-        for (int i = 1; i < randomNumbers.length; i++) {
-            if (randomNumbers[i] <= randomNumbers[i - 1]) {
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] <= array[i - 1]) {
                 isIncreasingSequence = false;
+                break;
             }
         }
         if (isIncreasingSequence) {
