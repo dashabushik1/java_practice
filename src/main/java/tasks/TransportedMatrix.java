@@ -1,47 +1,37 @@
 /**
  * Напишите программу, которая будет транспортировать заданную квадратную матрицу без использования дополнительного массива.
  * Транспортированная матрица - это матрица, полученная из исходной матрицы путем замены строк на столбцы.
- * [1 2]   [1 3]
- * [3 4]   [2 4]
+ * пример: [1 2]   [1 3]
+ *         [3 4]   [2 4]
  */
 package tasks;
 
 public class TransportedMatrix {
 
+    private static final int ROWS_AND_COLUMNS = 5;
+
     public static void main(String[] args) {
 
-        final int SIZE = 5;
-        int[][] squareMatrix = new int[SIZE][SIZE];
+        int[][] squareMatrix = new int[ROWS_AND_COLUMNS][ROWS_AND_COLUMNS];
 
         fillSquareMatrix(squareMatrix);
         System.out.println("Initial matrix: ");
-        printInitialMatrix(squareMatrix);
+        print(squareMatrix);
         System.out.println("");
         matrixTransportation(squareMatrix);
         System.out.println("Transported matrix: ");
-        printTransportedMatrix(squareMatrix);
+        print(squareMatrix);
     }
 
-    public static int[][] fillSquareMatrix(int[][] squareMatrix) {
-        for (int i = 0; i < squareMatrix.length; i++) {
+    public static void fillSquareMatrix(int[][] squareMatrix) { // метод заполняет квадратную матрицу
+        for (int i = 0; i < squareMatrix.length; i++) {     // случайными числами
             for (int j = 0; j < squareMatrix[i].length; j++) {
                 squareMatrix[i][j] = (int) (Math.random() * 10);
             }
         }
-        return squareMatrix;
     }
 
-    public static int[][] printInitialMatrix(int[][] squareMatrix) {
-        for (int i = 0; i < squareMatrix.length; i++) {
-            for (int j = 0; j < squareMatrix[i].length; j++) {
-                System.out.printf("%2d", squareMatrix[i][j]);
-            }
-            System.out.println("");
-        }
-        return squareMatrix;
-    }
-
-    public static int[][] matrixTransportation(int[][] squareMatrix) {
+    public static void matrixTransportation(int[][] squareMatrix) { // метод транспортирует матрицу
         for (int i = 0; i < squareMatrix.length; i++) {
             for (int j = i + 1; j < squareMatrix[i].length; j++) {
                 if (i != j) {
@@ -51,17 +41,15 @@ public class TransportedMatrix {
                 }
             }
         }
-        return squareMatrix;
     }
 
-    public static int[][] printTransportedMatrix(int[][] squareMatrix) {
+    public static void print(int[][] squareMatrix) {  // метод выводит матрицу
         for (int i = 0; i < squareMatrix.length; i++) {
             for (int j = 0; j < squareMatrix[i].length; j++) {
                 System.out.printf("%2d", squareMatrix[i][j]);
             }
             System.out.println("");
         }
-        return squareMatrix;
     }
 }
 
