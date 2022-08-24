@@ -5,30 +5,30 @@ package tasks;
 
 public class MultiplicationTableForThree {
 
-    public static void main(String[] args) {
-        final int NUMBER = 3;
-        final int SIZE = 11;
-        String[] multiplicationTable = new String[SIZE];
+    private static final int MULTIPLICATION_FOR = 3;
+    private static final int SIZE_OF_TABLE = 11;
 
-        countMultiplicationTable(NUMBER, multiplicationTable);
-        printMultiplicationTable(multiplicationTable);
+    public static void main(String[] args) {
+
+        String[] multiplicationTable = new String[SIZE_OF_TABLE];
+
+        createMultiplicationTable(MULTIPLICATION_FOR, multiplicationTable);
+        print(multiplicationTable);
     }
 
-    public static String[] countMultiplicationTable(int n, String[] multiplicationTable) { // метод принимает число и считает таблицу умножения
+    public static void createMultiplicationTable(int n, String[] array) { // метод принимает число и создает таблицу умножения
         String multiply = " * ";
         String equals = " = ";
         for (int i = 1; i <= 10; i++) {
-            multiplicationTable[i] = i + multiply + n + equals + (i * n);
+            array[i] = i + multiply + n + equals + (i * n);
         }
-        return multiplicationTable;
     }
 
-    public static String[] printMultiplicationTable(String[] multiplicationTable) { // метод выводит таблицу умножения
-        for (int i = 0; i < multiplicationTable.length; i++) {
-            if (multiplicationTable[i] != null) {
-                System.out.println(multiplicationTable[i] + " ");
+    public static void print(String[] array) { // метод выводит таблицу умножения
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != null) {
+                System.out.println(array[i] + " ");
             }
         }
-        return multiplicationTable;
     }
 }
