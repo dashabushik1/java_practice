@@ -6,10 +6,12 @@ package tasks;
 
 public class NumbersFromSeven {
 
+    private static final int MAGIC_NUMBER = 7;
+    private static final int MAX_NUMBER = 100;
+
     public static void main(String[] args) {
 
-        int maxNumber = 100;
-        for (int i = 7; i < maxNumber; i = i + 7) {
+        for (int i = MAGIC_NUMBER; i < MAX_NUMBER; i = i + MAGIC_NUMBER) {
             System.out.print(i + " ");
         }
     }
