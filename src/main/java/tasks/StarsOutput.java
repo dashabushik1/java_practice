@@ -10,6 +10,7 @@ public class StarsOutput {
 
     private static final int ROWS = 3;
     private static final int COLUMNS = 5;
+    private static final String FILLER = " * ";
 
     public static void main(String[] args) {
 
@@ -20,10 +21,9 @@ public class StarsOutput {
     }
 
     public static void fill(String[][] array) {   // метод заполняет двумерный массив звездочками
-        String star = "*";
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = star;
+                array[i][j] = FILLER;
             }
         }
     }
