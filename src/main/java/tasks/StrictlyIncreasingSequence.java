@@ -7,6 +7,7 @@ package tasks;
 public class StrictlyIncreasingSequence {
 
     private static final int SIZE = 4;
+    private static final int SEQUENCE_MAX = 90;
 
     public static void main(String[] args) {
 
@@ -14,12 +15,12 @@ public class StrictlyIncreasingSequence {
 
         fillArrayOfRandomNumbers(randomNumbers);
         print(randomNumbers);
-        printMessage(randomNumbers);
+        checkSequence(randomNumbers);
     }
 
     public static void fillArrayOfRandomNumbers(int[] array) {  // метод заполняет массив случайными числами
-        for (int i = 0; i < 4; i++) {
-            array[i] = (int) ((Math.random() * 90) + 10);
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) ((Math.random() * SEQUENCE_MAX) + 10);
         }
     }
 
@@ -30,7 +31,7 @@ public class StrictlyIncreasingSequence {
         System.out.println("");
     }
 
-    public static void printMessage(int[] array) {  // метод проверяет числа и выводит сообщения
+    public static void checkSequence(int[] array) {  // метод проверяет числа и выводит сообщения
         boolean isIncreasingSequence = true;
         for (int i = 1; i < array.length; i++) {
             if (array[i] <= array[i - 1]) {
