@@ -7,6 +7,7 @@ package tasks;
 public class TwelveRandomNumbers {
 
     private static final int SIZE = 12;
+    private static final int MAX_BOUNDER = 15;
 
     public static void main(String[] args) {
 
@@ -19,9 +20,9 @@ public class TwelveRandomNumbers {
 
     public static void fillArrayOfRandomNumbers(int[] array) { // метод заполняет массив случайными числами
         for (int i = 0; i < array.length; i++) {
-            int number = (int) (Math.random() * 15);
-            int mark = Math.random() > 0.5 ? 1 : -1;
-            array[i] = number * mark;
+            int number = (int) (Math.random() * MAX_BOUNDER);
+            int sign = Math.random() > 0.5 ? 1 : -1;
+            array[i] = sign * number;
         }
     }
 
