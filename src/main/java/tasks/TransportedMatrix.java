@@ -8,11 +8,11 @@ package tasks;
 
 public class TransportedMatrix {
 
-    private static final int ROWS_AND_COLUMNS = 5;
+    private static final int MATRIX_SIZE = 5;
 
     public static void main(String[] args) {
 
-        int[][] squareMatrix = new int[ROWS_AND_COLUMNS][ROWS_AND_COLUMNS];
+        int[][] squareMatrix = new int[MATRIX_SIZE][MATRIX_SIZE];
 
         fillSquareMatrix(squareMatrix);
         System.out.println("Initial matrix: ");
