@@ -23,12 +23,15 @@ public class ElementsOfArrayInOppositeOrder {
     }
 
     public static void reverse(String[] array) {  // метод меняет местами элементы массива в обратном порядке
-        int arrayLength = array.length;
-        int iterations = arrayLength / 2;
-        for (int i = 0; i < iterations; i++) {
-            String reverse = array[i];
-            array[i] = array[arrayLength - 1 - i];
-            array[arrayLength - 1 - i] = reverse;
+        int index = 0;
+        while (index < array.length / 2) {
+            int lastIndex = array.length - index - 1;
+            String string1 = array[index];
+            String string2 = array[lastIndex];
+            string1 = array[lastIndex];
+            array[lastIndex] = array[index];
+            array[index] = string1;
+            index++;
         }
     }
 }
