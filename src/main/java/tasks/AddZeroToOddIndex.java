@@ -7,6 +7,7 @@ package tasks;
 public class AddZeroToOddIndex {
 
     private static final int SIZE = 8;
+    private static final int MAX_BORDER = 10;
 
     public static void main(String[] args) {
 
@@ -21,7 +22,7 @@ public class AddZeroToOddIndex {
 
     public static void fillArrayByRandomNumbers(int[] array) {  // метод заполняет массив случайными числами
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 10) + 1;
+            array[i] = (int) (Math.random() * MAX_BORDER) + 1;
         }
     }
 
