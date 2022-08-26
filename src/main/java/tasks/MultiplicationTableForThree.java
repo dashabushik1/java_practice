@@ -6,11 +6,11 @@ package tasks;
 public class MultiplicationTableForThree {
 
     private static final int MULTIPLICATION_FOR = 3;
-    private static final int SIZE_OF_TABLE = 11;
+    private static final int TABLE_SIZE = 11;
 
     public static void main(String[] args) {
 
-        String[] multiplicationTable = new String[SIZE_OF_TABLE];
+        String[] multiplicationTable = new String[TABLE_SIZE];
 
         createMultiplicationTable(MULTIPLICATION_FOR, multiplicationTable);
         print(multiplicationTable);
