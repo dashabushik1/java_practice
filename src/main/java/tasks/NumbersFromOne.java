@@ -20,11 +20,11 @@ public class NumbersFromOne {
 //    }
 
     private static final int MAX_NUMBER = 512;
-    private static final int LENGTH_OF_ARRAY = 10;
+    private static final int MULTIPLIER = 10;
 
     public static void main(String[] args) {
 
-        int[] sequenceOfNumbers = new int[LENGTH_OF_ARRAY];
+        int[] sequenceOfNumbers = new int[MAX_NUMBER / MULTIPLIER];
 
         fillArrayBySequenceOfNumbers(sequenceOfNumbers, MAX_NUMBER);
         print(sequenceOfNumbers);
